@@ -5,6 +5,6 @@ import com.stuyfission.fissionlib.input.GamepadStatic.Input;
 
 public class Controls {
 
-    public static final Input Arm = Input.LEFT_TRIGGER;
+    public static final Input ARM = Input.LEFT_TRIGGER;
 
 }

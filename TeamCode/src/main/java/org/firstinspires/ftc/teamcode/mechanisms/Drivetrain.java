@@ -1,5 +1,6 @@
 package org.firstinspires.ftc.teamcode.mechanisms;
 
+import com.acmerobotics.roadrunner.Pose2d;
 import com.acmerobotics.roadrunner.Vector2d;
 import com.acmerobotics.roadrunner.PoseVelocity2d; 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
@@ -18,7 +19,7 @@ public class Drivetrain extends Mechanism {
 
     @Override
     public void init(HardwareMap hwMap) {
-        rrDrive = new MecanumDrive(hwMap);
+        rrDrive = new MecanumDrive(hwMap, new Pose2d(0, 0, 0));
     }
     @Override
     public void loop(Gamepad gamepad) {
@@ -27,11 +28,11 @@ public class Drivetrain extends Mechanism {
                 new PoseVelocity2d(
                   new Vector2d (
                         -gamepad.left_stick_y,
-                        -gamepad.left_stick_x,
+                        -gamepad.left_stick_x
                             ),
-                  -gamepad.right.right_stick_x
+                  -gamepad.right_stick_x
                   )
                     );
-        rrDrive.update();
+        rrDrive.localizer.update();
     }
 }

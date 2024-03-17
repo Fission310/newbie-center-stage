@@ -35,14 +35,11 @@ public class Claw extends Mechanism{
     }
     @Override
     public void loop(Gamepad gamepad) {
-        if (GamepadStatic.isButtonPressed(gamepad, Controls.SCORE_TWO))
+        if (GamepadStatic.isButtonPressed(gamepad, Controls.CLAW_SCORE))
         {ServoOpen();}
 
-        if (GamepadStatic.isButtonPressed(gamepad, Controls.GRAB))
+        if (GamepadStatic.isButtonPressed(gamepad, Controls.CLAW_GRAB))
         {close();}}
 
 
     }
-
-
-}

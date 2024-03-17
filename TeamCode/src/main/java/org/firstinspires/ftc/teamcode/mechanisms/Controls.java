@@ -11,4 +11,7 @@ public class Controls {
     public static final Input MED = Input.RIGHT_BUMPER;
     public static final Input HIGH = Input.RIGHT_STICK_BUTTON;
 
+    public static final Input CLAW_SCORE = Input.DPAD_LEFT;
+
+    public static final Input CLAW_GRAB = Input.DPAD_RIGHT;
 }
